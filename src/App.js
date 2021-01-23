@@ -54,7 +54,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/780290/extras/20190514-gloomhaven-logoanimated.gif?t=1608655526"
-          style={{margin: "-20% 0 8% 0"}}
+        style={{top: "8px", display: "block", position: "absolute"}}
         />
         <p>
           Select The Players' Levels:
@@ -66,9 +66,9 @@ const App = () => {
           <LevelSelect cardinal="Fourth" level = {fourthLevel} set = {setFourthLevel} />
         </div>
         <p>
-          Scenario Level: {Math.ceil(scLevel)}
+          Scenario Level: <span style={{display: scLevel>0 ? "inline":"none", fontSize: "110%"}}>{Math.ceil(scLevel)}</span>
         </p>
-        <span style={{fontSize: "16px", color: "grey", marginTop: "-16px"}}>raw: {scLevel}</span>
+        <span style={{display: scLevel>0 ? "inherit":"none", fontSize: "16px", color: "grey", marginTop: "-16px"}}>raw: {scLevel}</span>
 
       </header>
     </div>
